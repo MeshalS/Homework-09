@@ -25,12 +25,21 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+    // if with call back using new if 
+    fs.writeFile(fileName, generateMarkdown(data), error => error ? console.log(error) : console.log("this is been created ."));
 }
+
 
 // function to initialize program
 function init() {
-
-}
+    inquirer.prompt(questions)
+    .then(data => {
+        writeToFile("newReadMe.md", data);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+};
 
 // function call to initialize program
 init();
