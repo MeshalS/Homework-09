@@ -1,6 +1,6 @@
 let  inquirer = require("inquirer");
 let fs = require("fs");
-let generateMarkdown = require("./generateMarkdown")
+let generateMarkdown = require("./utils/generateMarkdown")
 
 const questions = [
 
@@ -27,6 +27,7 @@ const questions = [
 function writeToFile(fileName, data) {
     // if with call back using new if 
     fs.writeFile(fileName, generateMarkdown(data), error => error ? console.log(error) : console.log("this is been created ."));
+    
 }
 
 
@@ -34,7 +35,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then(data => {
-        writeToFile("newReadMe.md", data);
+        writeToFile("ReadME.md", data);
     })
     .catch(err => {
         console.log(err);
