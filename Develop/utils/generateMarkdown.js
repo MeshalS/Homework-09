@@ -2,7 +2,7 @@
 function generateMarkdown(data) {
   return `# ${data.title}__
 your user  name is :- ${data.username}__
-Email: ${data.email}__
+your Email: ${data.email}__
 `;
 }
 
