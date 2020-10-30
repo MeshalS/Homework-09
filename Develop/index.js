@@ -18,8 +18,21 @@ const questions = [
     message: "What is your project?",
     name: "title"
 
-}
+}, 
+
+  {
+    type: "input",
+    name: "usage",
+    message: "please explain the application?"
+  },
+
+  {
+    type: "input",
+    name: "installation",
+    message: "explain the installation to the user please  ?",
+  },
     
+
 
 ];
 

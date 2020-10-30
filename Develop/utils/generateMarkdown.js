@@ -1,8 +1,18 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}__
-your user  name is :- ${data.username}__
-your Email: ${data.email}__
+  return `#
+your user  name is :- ${data.username}
+
+your Email: ${data.email}
+
+The project is :- ${data.email}
+
+The title is :- ${data.title}
+
+The applcation is :- ${data.usage}
+
+installation  is :-  ${data.installation}
+
 `;
 }
 
